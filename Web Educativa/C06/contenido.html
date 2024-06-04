@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructive &amp; co.</title>
+    <link rel="stylesheet" href="css/C06.css">
+</head>
+<body>
+    <h1>Constructive &amp; Co.</h1>
+    <script src="js/contenido.js"></script>
+    <p id="contacto">Para todos sus diseños llame al <br><em>301-776-6536</em></p>
+    <div>
+        <div id="divcontenedor">ejemplo de codigo javaScript con funcion InnerHTML</div>
+        <br>
+        <p>presione para tomar texto inicial</p>
+        <button style="color: red;" onclick="accionInnerHTML()">haz clic aqui para ubicar el texto</button>
+        
+        <p id="textoresultante" class="textoresultante"></p>
+        <script type="text/javaScript">
+            function accionInnerHTML(){
+                var conseguirdatoinicial= document.getElementById("divcontenedor").innerHTML;//leer valor
+                document.getElementById("textoresultante").innerHTML=`<br>el texto inicial es: ${conseguirdatoinicial}`;//asignar valor
+            }
+    
+        </script>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructive &amp; co.</title>
+    <link rel="stylesheet" href="css/c08.css">
+</head>
+<body>
+    <h1>Constructive &amp; Co.</h1>
+    <script src="js/contenido.js"></script>
+    <p>Para todos sus diseños llame al <br><em>301-776-6536/em></p>
+    <div>
+        <form id="formulario">
+            Nombre: <input type="text" name="Nombre" id="nombre" autocomplete="off">
+            Edad: <input type="number" name="Edad" id="edad" autocomplete="off">
+            Altura: <input type="text" name="Altura" id="altura" autocomplete="off">
+            Estado civil: <input type="text" name="EstadoCivil" id="estadocivil" autocomplete="off">
+            <input type="submit" value="Enviar">
+        </form>
+        
+        <p id="datos"></p>
+        
+        <script type="text/javascript">
+            const formulario = document.querySelector("#formulario");
+
+            formulario.addEventListener("submit", enviar);
+            function enviar(e){
+                e.preventDefault();
+                const nombre = document.querySelector("#nombre").value;
+                const edad =document.querySelector("#edad").value;
+                const altura = document.querySelector("#altura").value;
+                const estado_civil = document.querySelector("#estadocivil").value;
+
+                const respuesta = document.getElementById("datos");
+                respuesta.textContent = `Datos enviados: Nombre: ${nombre}, Edad: ${edad}, Altura: ${altura}, Estado civil: ${estado_civil}`;
+            }
+        </script>
+    </div>
+</body>
+</html>
